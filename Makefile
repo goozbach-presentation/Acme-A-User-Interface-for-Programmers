@@ -8,7 +8,7 @@ SLIDESHOW := https://github.com/goozbach-presentation/slideshow-goozbach.git
 NAMES := $(patsubst %.md,%,$(wildcard *.md))
 
 $(CONFIG):
-	git submodule init $(SLIDESHOW) $(CONFIG)
+	git submodule add $(SLIDESHOW) $(CONFIG)
 
 $(OUTPUTDIR)/%.html: $(CONFIG)
 	slideshow -c $(CONFIG) -t $(THEME) -o $(OUTPUTDIR) $(shell echo $@ | sed -e 's/output\/\(.*\)\.html/\1/')
