@@ -75,8 +75,71 @@ subfooter: http://presentation.goozbach.com/
 # Using Acme
 
 * You\'re gonna want a three button mouse
-![Mouse](mail.jpg "Mouse")
 
-# Pipes
+![Mouse](mouse.jpg "Mouse")
 
-* Help
+# Button clicks
+
+* Button 1 (left button)
+
+  * Place cursor
+
+* Button 2 (middle button)
+
+  * Execute text (or command)
+
+* Button 3 (right button)
+
+  * Umm\.\.\. it depends (mostly plumb)
+
+# Mouse Chords
+
+* Cut(Copy) and Paste
+
+  1. Drag B1 (select text, don\'t let go)
+
+  1. Click B2 (don\'t let go of B1, this will cut)
+
+  1. Click B3 (let both go, this will paste back into place)
+
+  1. Click B1+B3 (paste again)
+
+# Advanced Mouse Chords
+
+* Honestly I don\'t quite understand them myself.
+
+* But
+
+  * There\'s one for execute
+
+  * Another for \'plumb\'
+
+  * You can also plumb or execute with a double chord to specify arguments to a command
+
+# Plumbing
+
+* Crazy Voodoo
+
+* Think intelligent Unix pipes.
+
+# Win
+
+* Running a shell in a buffer
+
+* I have modified my dotfiles to make it nicer
+
+  * (I still need to get these into github, sorry)
+
+# Programmer\'s Interface
+
+* Plan9 paridigm
+
+  * We can manupliate Acme by using file manipulation commands
+
+  * Easily done with 9p
+
+  * Can also be done by mounting Acme namespace using FUSE.
+
+# Acme-Tools
+
+* [Small programs](https://github.com/goozbach/acme-tools) I\'ve written to use with Acme
