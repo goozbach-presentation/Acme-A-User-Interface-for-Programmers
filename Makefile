@@ -10,11 +10,20 @@ NAMES := $(patsubst %.md,%,$(wildcard *.md))
 $(CONFIG):
 	git submodule add $(SLIDESHOW) $(CONFIG)
 
-$(OUTPUTDIR)/%.html: $(CONFIG)
-	slideshow -c $(CONFIG) -t $(THEME) -o $(OUTPUTDIR) $(shell echo $@ | sed -e 's/output\/\(.*\)\.html/\1/')
+$(OUTPUTDIR)/%.html: $(CONFIG) %.md
+	slideshow -c $(CONFIG) -t $(THEME) -o $(OUTPUTDIR) $(shell echo $@ | sed -e 's/$(OUTPUTDIR)\/\(.*\)\.html/\1/')
+	cd $(OUTPUTDIR) && ln -sf $(shell echo $@ | sed -e 's/$(OUTPUTDIR)\/\(.*\.html\)/\1/') index.html && cd -
 
 .SECONDEXPANSION:
 $(NAMES): $$(patsubst %,output/%.html,$$@)
 
-.PHONY: all $(NAMES)
+.PHONY: all $(NAMES) clean update
+
+update:
+	git submodule init
+	git submodule update
+
+clean:
+	rm -rf $(OUTPUTDIR)
+
 all: $(NAMES)
