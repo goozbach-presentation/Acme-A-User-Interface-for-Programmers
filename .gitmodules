@@ -3,4 +3,4 @@
 	url = https://github.com/goozbach-presentation/slideshow-goozbach.git
 [submodule "example-dir/bash-app"]
 	path = example-dir/bash-app
-	url = /Volumes/HomeDirs/dcarter/projects/bash-app/
+	url = https://github.com/goozbach/bash-app.git
