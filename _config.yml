@@ -1,4 +1,4 @@
 ---
 baseurl: "http://presentation.goozbach.com/Acme-A-User-Interface-for-Programmers/"
 pygments: True
-include: '.htaccess'
+include: ['.htaccess']
