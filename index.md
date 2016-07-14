@@ -9,5 +9,7 @@ title: 'Acme: A User Interface for Programmers'
 
 * [Source](https://github.com/goozbach-presentation/Acme-A-User-Interface-for-Programmers)
 
+* [Resources](resources.html)
+
 
 
